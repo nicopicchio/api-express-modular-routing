@@ -15,10 +15,10 @@ app.use(morgan('dev'));
 // REQUIRE ROUTERS
 const usersRouter = require('./src/routers/users');
 const filmsRouter = require('./src/routers/films');
-// const booksRouter = require('./src/routers/books');
+const booksRouter = require('./src/routers/books');
 app.use('/users', usersRouter);
 app.use('/films', filmsRouter);
-// app.use('/books', booksRouter);
+app.use('/books', booksRouter);
 
 /* START SERVER */
 app.listen(port, () => {
